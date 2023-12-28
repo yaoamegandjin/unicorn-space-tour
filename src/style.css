@@ -84,10 +84,58 @@ header h1 {
 main {
   color: #767676;
 }
+
+/* Components: Card */
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.18)
+}
+
+.card__img {
+  min-height: 20vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px 8px 0 0;
+  background-position: center;
+
+}
+
+.card__content {
+  padding: 24px;
+}
+
+.card h3 span {
+  font-family: monospace;
+  font-size: 0.8em;
+  padding: 0.05em 0.25em;
+  background-color: rgba(255, 125, 166, 0.4);
+  border-radius: 4px;
+}
+
+/* Components: Button */
+.button {
+  text-decoration: none;
+  border: 1px;
+  padding: 0.5em 1em;
+  color: #ff7ca6;
+  background-color: #150f64;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.1;
+}
 /* Type Utilities */
 .lead {
   font-size: 125%;
   letter-spacing: 0.03em;
+}
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* Color Utilities */
@@ -102,7 +150,7 @@ main {
 }
 
 .max-line-length {
-  max-width: 6cm;
+  max-width: 60ch;
 }
 
 .text-dark {
@@ -127,6 +175,11 @@ main {
 .flexbox {
   display: flex;
   justify-content: space-between;
+}
+
+.flexbox--3col > * {
+  flex: 0 1 30%
+
 }
 
 .flexbox--aligncenter {
