@@ -54,7 +54,7 @@ select {
 }
 
 /* Typography */
-h1, h2, h3, nav a {
+h1, h2, h3, nav li {
   font-family: 'Kulim Park', sans-serif;
 }
 
@@ -200,6 +200,41 @@ nav a:hover {
   display: inline-block;
   text-align: center;
   line-height: 1.1;
+}
+
+button.button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Component: Form */
+form {
+  display: grid;
+  grid-gap: 24px;
+  max-width: 60ch;
+}
+
+.form-field {
+  display: grid;
+  grid-gap: 8px;
+}
+
+.form-field .button {
+  justify-self: start;
+}
+
+.form-input {
+  border: 1px solid #6075b0;
+  border-radius: 4px;
+  height: 2em;
+  padding: 0 0.5em;
+  font-size: 18px;
+}
+
+label {
+  color: #150f64;
+  font-weight: bold;
+  font-size: 18px;
 }
 /* Type Utilities */
 .lead {
