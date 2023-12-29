@@ -86,15 +86,41 @@ header h1 {
   color: #ff7ca6;
 }
 
-header img {
+.unicorn {
   position: absolute;
   bottom: 1vh;
   max-height: 48vh;
   max-width: 25vw;
-
-
 }
 
+.header-logo {
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 450ms ease-in 80ms;
+}
+
+.header-logo:hover {
+  transform: translate(8vw, -300%) scale(0.6);
+}
+
+@keyframes fadeIn {
+0% {
+  opacity: 0.1;
+  transform: translateY(25%);
+}
+100% {
+  opacity: 1;
+  transform: translate(0);
+}
+}
+
+header p {
+  opacity: 0.1;
+  transform: translateY(25%);
+  animation: fadeIn 450ms ease-in 300ms forwards;
+
+}
 /* Main Content */
 main {
   color: #767676;
