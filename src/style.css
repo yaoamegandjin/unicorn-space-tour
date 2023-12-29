@@ -100,6 +100,12 @@ main {
   color: #767676;
 }
 
+#about {
+  background-image: url("img/stars-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
 /* Components: Card */
 
 .card {
@@ -203,6 +209,12 @@ main {
 .padding-v-md {
   padding-top: 24px;
   padding-bottom: 24px;
+}
+
+.padding-v-lg {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
 }
 
 .margin-v-0 {
