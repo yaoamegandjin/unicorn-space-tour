@@ -9,6 +9,10 @@ const paths = {
   html: {
     src: ["./src/*.html"],
     dest: "./dist/"
+  },
+  img: {
+    src: ["./src/img/*"],
+    dest: "./dist/"
   }
 };
 
@@ -28,6 +32,14 @@ function html() {
     .pipe(browserSync.stream());
 }
 
+/*Images*/ 
+function img() {
+  return gulp
+    .src(paths.img.src)
+    .pipe(gulp.dest(paths.img.dest))
+    .pipe(browserSync.stream());
+}
+
 /* FUNCTIONS */
 function watch() {
   browserSync.init({
@@ -35,6 +47,7 @@ function watch() {
       baseDir: "./src/"
     }
   });
+  gulp.watch(paths.img.src, img);
   gulp.watch(paths.styles.src, style);
   gulp.watch(paths.html.src, html);
 }
